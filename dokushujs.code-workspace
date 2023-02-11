@@ -7,6 +7,7 @@
 	"settings": {
 		"liveServer.settings.CustomBrowser": null,
 		"liveServer.settings.NoBrowser": false,
-		"liveServer.settings.AdvanceCustomBrowserCmdLine": "/mnt/c/Program Files/Mozilla Firefox/firefox.exe"
+		"liveServer.settings.AdvanceCustomBrowserCmdLine": "/mnt/c/Program Files/Mozilla Firefox/firefox.exe",
+		"editor.formatOnSave": true,
 	}
 }
