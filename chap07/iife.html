@@ -1,0 +1,8 @@
+<script>
+    (function fnA(){
+        const val = "即時関数外からは参照不可";
+    })();
+    (function fnB(){
+        console.log(val); // エラーが発生
+    })();
+</script>

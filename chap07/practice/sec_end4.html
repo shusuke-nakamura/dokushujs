@@ -1,0 +1,11 @@
+<script>
+    const delayMessageFactory1 = (printFn, ms) => function (msg) {
+        setTimeout(function(){
+            printFn(msg)
+        }, ms);
+    };
+
+    const delayMessageFactory2 = (printFn, ms) => msg => setTimeout(function () { printFn(msg); }, ms);
+    const delayMessageFactory3 = (printFn, ms) => msg => setTimeout(() => printFn(msg), ms);
+
+</script>

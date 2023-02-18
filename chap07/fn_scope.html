@@ -1,0 +1,20 @@
+<script>
+    function fnA() {
+        /* fnAスコープ開始 */
+        let valA = "fnA内の値";
+        const subA = function() {console.log("fnA内の値")};
+        console.log(valA);
+        subA();
+        /* fnAスコープ終了 */
+    }
+    fnA();
+
+    function fnB() {
+        console.log(valA);
+        subA();
+    }
+    fnB();
+
+    console.log(valA);
+    subA();
+</script>
