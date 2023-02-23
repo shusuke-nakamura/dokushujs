@@ -1,0 +1,19 @@
+<script>
+    function Parent() {}
+
+    function Child() {}
+
+    Parent.prototype.parentMethod = function() {
+        console.log("親のメソッド");
+    }
+
+    Child.prototype = Object.create(Parent.prototype);
+
+    Child.prototype.childMethod = function() {
+        console.log("子のメソッド");
+    }
+
+    const childObj = new Child;
+    childObj.parentMethod();
+    childObj.childMethod();
+</script>
