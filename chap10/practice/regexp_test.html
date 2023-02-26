@@ -1,0 +1,20 @@
+<script>
+    function zipCodeChecker(zipcode) {
+        console.log(/^\d{3}-\d{4}$/.test(zipcode));
+    }
+
+    zipCodeChecker("001-0012");
+    zipCodeChecker("001-001");
+    zipCodeChecker("2.2-4042");
+    zipCodeChecker("wd3-2131s");
+    zipCodeChecker("124-56789");
+
+    function emailChecker(email) {
+        console.log(/^[\w.\-]+@[\w\-]+\.[\w\.\-]+$/.test(email));
+    }
+
+    emailChecker("example000@gmail.com");
+    emailChecker("example-0.00@gmail.com");
+    emailChecker("example-0.00@ex.co.jp");
+    emailChecker("exmpale/0.00@ex.co.jp");
+</script>

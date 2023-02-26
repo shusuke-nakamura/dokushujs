@@ -1,0 +1,19 @@
+<script>
+    let now = new Date();
+    console.log(now);
+
+    let date = new Date(24 * 60 * 60 * 1e3);
+    console.log(date);
+
+    const localTime = new Date("2021-05-04T02:35:00");
+    console.log(localTime.toISOString());
+
+    const utcTime = new Date("2021-05-04T02:35:00Z");
+    console.log(utcTime.toISOString());
+
+    const hawaiTime = new Date("2021-05-04T02:35:00-10:00");
+    console.log(hawaiTime.toISOString());
+
+    let date1 = new Date(2021, 0, 4, 2, 35, 0);
+    console.log(date1);
+</script>

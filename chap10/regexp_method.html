@@ -1,0 +1,20 @@
+<script>
+    // match(regex)
+    "babcde".match(/a(b)c(d)e/);
+
+    // matchAll(regex)
+    const it = "return request".matchAll(/re(\S+)/g);
+    for (const v of it) {
+        console.log(v);
+    }
+
+    // replace(regex,replaceStr)
+    "apple, lemon".replace(/([a-z]+), lemon/, "banana, $1");
+
+    // search(regex)
+    "text".search(/a/);
+    "hello, abc".search(/a/);
+
+    //split([separator[, limit]])
+    "return request response".split(/\s/);
+</script>
