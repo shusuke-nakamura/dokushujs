@@ -1,0 +1,13 @@
+<script>
+    const chuka = ["八宝菜", "餃子", "回鍋肉", "青椒肉絲"];
+    chuka.push("天津飯");
+    chuka.unshift("チャーハン");
+    chuka.shift();
+    chuka.pop();
+    chuka.splice(2, 1);
+    console.log(chuka.indexOf("餃子"));
+    chuka = chuka.concat(["杏仁豆腐", "ごま豆腐"]);
+    let newChuka = chuka.slice(1, 4);
+    newChuka.reverse();
+    console.log(newChuka.includes("八宝菜"));
+</script>

@@ -1,0 +1,21 @@
+<script>
+    const original = ["元の値"];
+    const copied = original;
+    copied[0] = "変更後の値";
+    console.log(original[0]);
+
+    const original2 = ["元の値"];
+    const copied2 = original2.concat();
+    copied2[0] = "変更後の値";
+    console.log(original2);
+
+    const original3 = [
+        "1階層目の値",
+        ["2階層目の値"]
+    ];
+    const copied3 = original3.concat();
+    copied3[0] = "変更後の値";
+    copied3[1][0] = "変更後の値";
+    console.log(original3[0]);
+    console.log(original3[1][0]);
+</script>
