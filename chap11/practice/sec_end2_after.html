@@ -1,0 +1,30 @@
+<script>
+    // Personクラス
+    class Person {
+        constructor(fullname, age, gender) {
+            this.fullname = fullname;
+            this.age = age;
+            this.gender = gender;
+        }
+    }
+    // 登場人物
+    const taro = new Person("太郎", 18, "男");
+    const jiro = new Person("次郎", 15, "男");
+    const saburo = new Person("三郎", 10, "男");
+    const hanako = new Person("花子", 23, "女");
+    const hanayo = new Person("花代", 18, "女");
+    // 友達（friends）オブジェクト
+    const friends = new Map;
+
+    friends.set(taro, new Set([jiro, hanayo]));
+    friends.set(hanako, new Set([hanayo, taro, saburo]));
+
+    const taroFriendSet = friends.get(taro);
+    taroFriendSet.add(hanako);
+
+    const taroFrindArray = Array.from(taroFriendSet);
+    taroFrindArray.sort((friendA, friendB) => friendB.age - friendA.age);
+    for (const person of taroFrindArray) {
+        console.log(person.fullname);
+    }
+</script>
