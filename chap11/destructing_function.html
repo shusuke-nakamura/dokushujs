@@ -1,0 +1,16 @@
+<script>
+    const fruitsArry = ["banana", "orange", "grape"];
+    const fruitsObj = {banana: "バナナ", orange: "オレンジ"};
+
+    function bunkatuArry([, , fruits3]) {
+        console.log(fruits3);
+    }
+
+    bunkatuArry(fruitsArry);
+
+    function bunkatuObj({orange}) {
+        console.log(orange);
+    } 
+
+    bunkatuObj(fruitsObj);
+</script>
