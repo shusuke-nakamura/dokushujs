@@ -1,0 +1,30 @@
+<script>
+    function alphabetIerator(start = "a", end = "z") {
+        if (start > end) {
+            throw "開始文字は終了文字より前のアルファベットを選んでください。";
+        }
+
+        const ALPHABET_ARRAY = "abcdefghigklmnopqrstuvwxyz".split("");
+        const startIndex = ALPHABET_ARRAY.indexOf(start);
+        const endIndex = ALPHABET_ARRAY.indexOf(end);
+        const targetAlphabet = ALPHABET_ARRAY.slice(startIndex, endIndex + 1);
+
+        return {
+            next() {
+                const alphabet = targetAlphabet.shift();
+
+                return {
+                    value: alphabet,
+                    done: alphabet ? false : true
+                }
+            }
+        }
+    }
+
+    const it = alphabetIerator("c", "e");
+    let nextValue = it.next();
+    while (!nextValue.done) {
+        console.log(nextValue);
+        nextValue = it.next();
+    }
+</script>

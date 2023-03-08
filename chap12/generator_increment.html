@@ -1,0 +1,14 @@
+<script>
+    function* getIncrement(max) {
+        let value = 0;
+        while (value < max) {
+            yield value++;
+        }
+    }
+
+    const iterator = getIncrement(3);
+    console.log(iterator.next());
+    console.log(iterator.next());
+    console.log(iterator.next());
+    console.log(iterator.next());
+</script>
