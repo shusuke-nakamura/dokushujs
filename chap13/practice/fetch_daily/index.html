@@ -1,0 +1,15 @@
+<script>
+    // fetch("deaily.json")
+    //     .then(response => response.json())
+    //     .then(data => {
+    //         console.log(data.world);
+    //     });
+
+    async function myFetchFn() {
+        const res = await fetch("deaily.json");
+        const jsonObj = await res.json();
+        console.log(jsonObj.world);
+    }
+
+    myFetchFn();
+</script>
