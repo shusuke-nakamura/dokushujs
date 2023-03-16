@@ -1,0 +1,12 @@
+<body>
+    <section id="container">
+        <button>ボタン</button>
+    </section>
+    <script>
+        const containerEl = document.querySelector("#container");
+        containerEl.addEventListener("click", function (event) {
+            console.log(`currentTarget:[${event.currentTarget.nodeName}]`);
+            console.log(`target:[${event.target.nodeName}]`);
+        });
+    </script>
+</body>
