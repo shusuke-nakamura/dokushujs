@@ -1,0 +1,35 @@
+<section>
+    section<br>
+    <div>
+        div<br>
+        <button>button</button>
+    </div>
+    <p>p<br>この要素は伝播の対象外です。</p>
+</section>
+<style>
+    section,
+    div,
+    p,
+    button {
+        padding: 10px;
+        border: 10px solid skyblue;
+    }
+</style>
+<script>
+    const button = document.querySelector("button");
+    const div = document.querySelector("div");
+    const section = document.querySelector("section");
+
+    button.addEventListener("click", (event) => {
+        console.log("buttonのclickイベントが実行されました。");
+    });
+
+    div.addEventListener("click", (event) => {
+        console.log("divのclickイベントが実行されました。");
+    })
+
+    section.addEventListener("click", (event) => {
+        event.stopPropagation();
+        console.log("sectionのclickイベントが実行されました。");
+    }, { capture: true });
+</script>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <div id="div1"></div>
+    <div id="div2">
+        <button>ボタン</button>
+    </div>
+    <script>
+        const div1 = document.querySelector("#div1");
+        const div2 = document.querySelector("#div2");
+        const button = document.querySelector("button");
+
+        window.addEventListener("click", () => {
+            console.log("windowのclickイベント");
+        }, { capture: true });
+
+        div1.addEventListener("click", () => {
+            console.log("div1のclickイベント");
+        }, { capture: true });
+
+        div2.addEventListener("click", () => {
+            console.log("div2のclickイベント");
+        }, { capture: true });
+
+        button.addEventListener("click", () => {
+            console.log("buttonのclickイベント");
+        }, { capture: true });
+
+    </script>
+</body>
+
+</html>
