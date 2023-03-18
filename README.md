@@ -16,3 +16,14 @@ ES6 以降の新しい記法で書かれたコードを古い記法のコード�
 
 複数ファイルに分割された JavaScript のコードを 1 つのファイルに結合します。これによって、機能単位でファイル分割でき、コードが整理
 しやすくなります。一般的に Bable と併用する。
+
+## Node.js ES Module規格に沿ってコードを実行する方法は以下のいずれかの方法で行う
+1. ファイルの拡張子を.mjsに変更する
+2. package.jsonのtype フィールドを変更する
+3. オプションを指定してnodeコマンドを実行する(--input-type=module)
+
+## Expressパッケージのインストール
+mkdir sample_express
+cd sample_express
+npm init -y
+npm install express
