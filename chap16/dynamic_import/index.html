@@ -1,0 +1,14 @@
+<script>
+    // Promiseオブジェクトでラップされたモジュールが渡される
+    let promise = import("./module.js");
+    promise.then(moduleObject => {
+        moduleObject.exportedFn();
+    });
+
+    // await/asyncを使うことも可能
+    async function asyncFunction() {
+        let { exportedFn } = await import("./module.js");
+        exportedFn();
+    }
+    asyncFunction();
+</script>

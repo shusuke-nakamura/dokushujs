@@ -1,0 +1,11 @@
+<script>
+    // function whatIsThis() {
+    //     return this;
+    // }
+    // console.log(whatIsThis.call(10) instanceof Number);
+    "use strict";
+    function whatIsThis() {
+        return this;
+    }
+    console.log(whatIsThis.call(10) === 10);
+</script>
