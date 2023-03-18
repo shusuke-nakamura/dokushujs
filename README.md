@@ -27,3 +27,6 @@ mkdir sample_express
 cd sample_express
 npm init -y
 npm install express
+
+## テンプレートエンジン(EJS)
+npm install ejs
